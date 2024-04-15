@@ -31,13 +31,13 @@ Description : ${i.desc}\`\`\``
       let currentTime = new Date();
       let runtime = clockString(currentTime - botStartTime);
 
-      let menu = `╭───❮ *${BOT_NAME}* ❯
-│ *ᴏᴡɴᴇʀ* :  ${OWNER_NAME}
-│ *ᴘʀᴇғɪx* : ${prefix}
-│ *ᴘʟᴀᴛғᴏʀᴍ* : ${hostname().split("-")[0]}
-│ *ᴘʟᴜɢɪɴs* : ${events.commands.length} 
-│ *ʀᴜɴᴛɪᴍᴇ* : ${runtime} 
-╰─────────────⦁\n`;
+      let menu = `៚👤 *${BOT_NAME}* ❀
+✮ *ᴏᴡɴᴇʀ* :  ${OWNER_NAME}
+✮ *ᴘʀᴇғɪx* : ${prefix}
+✮ *ᴘʟᴀᴛғᴏʀᴍ* : ${hostname().split("-")[0]}
+✮ *ᴘʟᴜɢɪɴs* : ${events.commands.length} 
+✮ *ʀᴜɴᴛɪᴍᴇ* : ${runtime} 
+═══════════════\n`;
       let cmnd = [];
       let cmd;
       let category = [];
@@ -63,12 +63,12 @@ Description : ${i.desc}\`\`\``
       });
       cmnd.sort();
       category.sort().forEach((cmmd) => {
-        menu += `╭───❮ *${cmmd}* ❯`;
+        menu += `៚👤 *${cmmd}* ❀`;
         let comad = cmnd.filter(({ type }) => type == cmmd);
         comad.forEach(({ cmd }, num) => {
           menu += `\n│  ${cmd.trim()}`;
         });
-        menu += `\n╰─────────────⦁\n`;
+        menu += `\n═════════════❀\n`;
       });
 
       menu += ``;
